@@ -3,6 +3,8 @@ A simple telegram notify bot for Emby server
 
 ## Run with Systemd
 
+Set the program to run every 6 hours
+
 ```
 sudo vi /etc/systemd/system/emby-notify.timer
 ```
@@ -21,9 +23,13 @@ Unit=emby-notify.service
 WantedBy=timers.target
 ```
 
+Set systemctl for the main program
+
 ```
 sudo nano /etc/systemd/system/emby-notify.service
 ```
+
+Input below text and save and exit.
 
 ```
 [Unit]
