@@ -25,8 +25,12 @@ conn_cursor.execute("""
     )
 """)
 
-url = f'{EMBY_SERVER_URL}/emby/Users/{EMBY_USER_ID}/Items/Latest?Limit=2&api_key={EMBY_API_KEY}'
-responses = requests.get(url).json()
+try:
+    url = f'{EMBY_SERVER_URL}/emby/Users/{EMBY_USER_ID}/Items/Latest?Limit=2&api_key={EMBY_API_KEY}'
+    responses = requests.get(url).json()
+except:
+    print("Wrong input url address")
+    conn.close()
 
 for response in responses:
     item_id = response['Id']
@@ -61,4 +65,4 @@ for response in responses:
         params = {'chat_id': TELEGRAM_CHAT_ID, 'caption': message, 'photo': item_img_url,'reply_markup': json.dumps(reply_markup),}
         # print(message, item_img_url)
         requests.post(url, params=params)
-
+conn.close()
