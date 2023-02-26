@@ -1,6 +1,8 @@
 # emby_notify_telegram_bot
 A simple telegram notify bot for Emby server
 
+Use sqlite3 to store the item datas. Every 6 hours, the program will retrieve the last 200 items updated to the notify user library with valid primary images(if there's no valid primary image, it will be ignored). Check if the database have the newe items' ids and output the new itesm to the telegram channel.
+
 ## Run with Systemd
 
 Set the program to run every 6 hours
