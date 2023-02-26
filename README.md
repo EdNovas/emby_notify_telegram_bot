@@ -4,26 +4,38 @@ A simple telegram notify bot for Emby server
 ## Run with Systemd
 
 ```
-sudo vi /etc/systemd/system/emby_notify.service
+sudo vi /etc/systemd/system/emby-notify.timer
 ```
 
 Input below text and save and exit.
 
 ```
 [Unit]
-Description=Emby notification bot
+Description=Run emby_notify.py every 6 hours
 
-[Service]
-Type=simple
-User=<your Linux username>
-ExecStart=/usr/bin/python3 /opt/emby_notify.py
-Restart=always
+[Timer]
+OnCalendar=*:0/6
+Unit=emby-notify.service
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=timers.target
 ```
 
 ```
-systemctl start emby_notify
-systemctl enable emby_notify
+sudo nano /etc/systemd/system/emby-notify.service
+```
+
+```
+[Unit]
+Description=Run emby_notify.py script
+
+[Service]
+Type=oneshot
+ExecStart=python3 /opt/emby_notify.py
+```
+
+```
+sudo systemctl daemon-reload
+systemctl start emby_notifysudo systemctl start emby-notify.timer
+sudo systemctl enable emby-notify.timer
 ```
