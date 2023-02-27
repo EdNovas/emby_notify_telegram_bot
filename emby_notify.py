@@ -6,6 +6,7 @@ EMBY_SERVER_URL = '<Your Emby Server URL>'
 EMBY_API_KEY = '<Your Emby API key>'
 EMBY_USER_ID = '<Your Emby Sample User used ID to get the updated videos>'
 SERVER_ID = '<Your emby Server ID>'
+ITEM_LIMIT = '200'
 TELEGRAM_BOT_TOKEN = '<Your Telegram Bot>'
 TELEGRAM_CHAT_ID = '<Your Telegram Update Channel>'
 CHANNEL = '<Your channel>'
@@ -26,7 +27,7 @@ conn_cursor.execute("""
 """)
 
 try:
-    url = f'{EMBY_SERVER_URL}/emby/Users/{EMBY_USER_ID}/Items/Latest?Limit=2&api_key={EMBY_API_KEY}'
+    url = f'{EMBY_SERVER_URL}/emby/Users/{EMBY_USER_ID}/Items/Latest?Limit={ITEM_LIMIT}&api_key={EMBY_API_KEY}'
     responses = requests.get(url).json()
 except:
     print("Wrong input url address")
