@@ -5,7 +5,7 @@ Use sqlite3 to store the item datas. Every 6 hours, the program will retrieve th
 
 ## Config
 
-```
+```bash
 EMBY_SERVER_URL = '<Your Emby Server URL>'
 # It's your emby server address, it can be a ip or domain, need to have http:// or https:// at the front
 # Example: 
