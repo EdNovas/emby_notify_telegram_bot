@@ -1,7 +1,9 @@
 # Emby Notify Telegram Bot
 
 一个简单的Emby剧集更新提醒telegraam机器人
+
 A simple telegram notify bot for Emby server
+
 使用 sqlite3 存储项目数据。 每 6 小时，程序将检索最后 200 个项目（您可以通过更改配置更改它）更新到具有有效主图像的通知用户库（如果没有有效的主图像，它将被忽略）。 检查数据库是否有新项目的 ID，并将新项目输出到电报频道。
 
 Use sqlite3 to store the item datas. Every 6 hours, the program will retrieve the last 200 items(you can change it by change the config) updated to the notify user library with valid primary images(if there's no valid primary image, it will be ignored). Check if the database have the newe items' ids and output the new itesm to the telegram channel.
