@@ -57,7 +57,7 @@ for response in responses:
             item_type_str = '电视剧'
         else:
             item_type_str = 'Unknown'
-        message = f'#上新\nTitle: {item_name} \n类型: {item_type}\n\n频道 {CHANNEL}\n群组 {GROUP}'
+        message = f'#上新\nTitle: {item_name} \n类型: {item_type_str}\n\n频道 {CHANNEL}\n群组 {GROUP}'
         url = f'https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendPhoto'
         button = {'text': '点击播放', 'callback_data': 'button_clicked', 'url': item_link}
         keyboard = [[button]]
