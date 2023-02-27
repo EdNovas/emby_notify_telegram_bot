@@ -71,7 +71,7 @@ WantedBy=timers.target
 Set systemctl for the main program
 
 ```bash
-sudo nano /etc/systemd/system/emby-notify.service
+sudo vi /etc/systemd/system/emby-notify.service
 ```
 
 Input below text and save and exit.
