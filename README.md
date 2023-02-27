@@ -34,13 +34,13 @@ GROUP = '<Your telegram group>'
 
 Set the program to run every 6 hours
 
-```
+```bash
 sudo vi /etc/systemd/system/emby-notify.timer
 ```
 
 Input below text and save and exit.
 
-```
+```bash
 [Unit]
 Description=Run emby_notify.py every 6 hours
 
@@ -54,13 +54,13 @@ WantedBy=timers.target
 
 Set systemctl for the main program
 
-```
+```bash
 sudo nano /etc/systemd/system/emby-notify.service
 ```
 
 Input below text and save and exit.
 
-```
+```bash
 [Unit]
 Description=Run emby_notify.py script
 
@@ -71,7 +71,7 @@ ExecStart=python3 /opt/emby_notify.py
 
 Run Systemctl
 
-```
+```bash
 sudo systemctl daemon-reload
 systemctl start emby_notifysudo systemctl start emby-notify.timer
 sudo systemctl enable emby-notify.timer
