@@ -1,7 +1,7 @@
 # emby_notify_telegram_bot
 A simple telegram notify bot for Emby server
 
-Use sqlite3 to store the item datas. Every 6 hours, the program will retrieve the last 200 items updated to the notify user library with valid primary images(if there's no valid primary image, it will be ignored). Check if the database have the newe items' ids and output the new itesm to the telegram channel.
+Use sqlite3 to store the item datas. Every 6 hours, the program will retrieve the last 200 items(you can change it by change the config) updated to the notify user library with valid primary images(if there's no valid primary image, it will be ignored). Check if the database have the newe items' ids and output the new itesm to the telegram channel.
 
 ## Note
 
@@ -37,8 +37,10 @@ EMBY_API_KEY = '<Your Emby API key>'
 EMBY_USER_ID = '<Your Emby Sample User ID to get the updated videos>'
 # Create a sample notify user, and get the user id from url.
 
+ITEMS_LIMIT = '<Input how many last items you want to get each time, default is 200>'
+
 SERVER_ID = '<Your emby Server ID>'
-# Server id of your image
+# Server id of your playable video link(you can find it in any video play page url)
 
 TELEGRAM_BOT_TOKEN = '<Your Telegram Bot>'
 # Create the api from telegram bot father
