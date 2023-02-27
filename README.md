@@ -8,7 +8,7 @@ Use sqlite3 to store the item datas. Every 6 hours, the program will retrieve th
 Download
 
 ```
-cd /opt && wget https://raw.githubusercontent.com/EdNovas/emby_notify_telegram_bot/main/emby_notify.py && chmod +x emby_notify.py
+cd /opt && wget https://raw.githubusercontent.com/EdNovas/emby_notify_telegram_bot/main/emby_notify.py && sudo chmod +x emby_notify.py
 ```
 
 Fill in the config
