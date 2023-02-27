@@ -10,9 +10,19 @@ Use sqlite3 to store the item datas. Every 6 hours, the program will retrieve th
 
 ## Note
 
-发布的频道消息都是中文的，如果你需要，你可以自己翻译并替换所有的汉字。
+发布的频道消息都是中文的，如果你需要其他语言，你可以自己翻译并替换所有的汉字。以下是英语的替换列表
 
-The published channel message is all written in Chinese, if you need, you can do the translation and replace all the Chinese characters by yourself.
+The published channel message is all written in Chinese, if you need other language, you can do the translation and replace all the Chinese characters by yourself. Below is the replcement with English words.
+
+```
+电影 == Movie
+电视剧 == Episode
+上新 == New Video
+类型 == Type
+频道 == Channel
+群组 == Group
+点击播放 == Click Here to Play
+```
 
 ## Use
 
