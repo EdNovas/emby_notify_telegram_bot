@@ -89,6 +89,6 @@ Run Systemctl
 
 ```bash
 sudo systemctl daemon-reload
-systemctl start emby_notifysudo systemctl start emby-notify.timer
+sudo systemctl start emby-notify.timer
 sudo systemctl enable emby-notify.timer
 ```
