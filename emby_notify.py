@@ -55,7 +55,7 @@ for response in responses:
         if item_type == 'Movie':
             item_type_str = '电影'
         elif item_type == 'Episode':
-            item_type_str = '电视剧'
+            item_type_str = '电视剧/动漫'
         else:
             item_type_str = 'Unknown'
         message = f'#上新\nTitle: {item_name} \n类型: {item_type_str}\n\n频道 {CHANNEL}\n群组 {GROUP}'
