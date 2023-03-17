@@ -32,6 +32,7 @@ try:
 except:
     print("Wrong input url address")
     conn.close()
+    exit(1)
 
 for response in responses:
     item_id = response['Id']
