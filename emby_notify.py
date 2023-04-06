@@ -4,7 +4,7 @@ import sqlite3
 
 EMBY_SERVER_URL = '<Your Emby Server URL>'
 EMBY_API_KEY = '<Your Emby API key>'
-EMBY_USER_ID = '<Your Emby Sample User used ID to get the updated videos>'
+EMBY_USER_ID = '<Your Emby Sample User ID, it was used to get the updated videos>'
 SERVER_ID = '<Your emby Server ID>'
 ITEM_LIMIT = '200'
 TELEGRAM_BOT_TOKEN = '<Your Telegram Bot>'
